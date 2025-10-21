@@ -26,8 +26,6 @@ public class DogApiBreedFetcher implements BreedFetcher {
      */
     @Override
     public List<String> getSubBreeds(String breed) throws BreedNotFoundException {
-        final OkHttpClient client = new OkHttpClient();
-
         Request request = new Request.Builder()
                 .url("https://dog.ceo/api/breed/" + breed + "/list")
                 .build();
